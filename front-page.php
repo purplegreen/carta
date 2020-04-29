@@ -81,7 +81,8 @@ while($query->have_posts()) : $query->the_post();
 				
 				<a class="undecorated" href="<?php the_permalink(); ?>">
 				<div class="wrapper_iconsize1">
-				<h5><?php the_field('icon'); ?></h5>
+				 
+				<?php the_post_thumbnail() ?>
 			    </div></a>
 		</div>
 </div>
@@ -146,7 +147,7 @@ while($query->have_posts()) : $query->the_post();
 						    </div>
 							<a class="undecorated" href="<?php the_permalink(); ?>">
 						    <div class="wrapper_iconsize2">
-							<h6><?php the_field('icon'); ?></h6>
+							<?php the_post_thumbnail() ?>
 							</div></a>
 
 					</div>
@@ -208,7 +209,7 @@ while($query->have_posts()) : $query->the_post();
 
 							<a class="undecorated" href="<?php the_permalink(); ?>">
 						    <div class="wrapper_iconsize2">
-							<h6><?php the_field('icon'); ?></h6>
+							<?php the_post_thumbnail() ?>
 							</div></a>
 
 					</div>
@@ -362,10 +363,7 @@ while($query->have_posts()) : $query->the_post();
 </div>
 
 
-
-
 <div class="third_section_bottom"> 
-
 			<?php
 			$args = array (
 

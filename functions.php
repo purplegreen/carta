@@ -12,6 +12,9 @@ add_action('wp_enqueue_scripts' , 'apparenza');
 	
 	add_theme_support( 'custom-logo' );
 
+// Post-thumbnails
+add_theme_support( 'post-thumbnails' );
+
 // Theme setup
 
 function myWordPress_setup(){
@@ -39,6 +42,8 @@ function extra_setup() {
 register_nav_menu ('primary mobile', __( 'Navigation Mobile', 'dehlix_simple' ));
 }
 add_action( 'after_setup_theme', 'extra_setup' );
+
+
 
 
 // svg
