@@ -619,9 +619,9 @@ h6 /*--- icon */ {
 
 /* -----------------------------------------------------------third_section */
 
-.third_section_top,
-.third_section_bottom {
-  display: block;
+.third_section {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   top: 0;
   width: 80%;
@@ -649,6 +649,25 @@ h6 /*--- icon */ {
 
 .box:hover {
   background: linear-gradient(30deg, #ffffff, #ffffff 60%, silver);
+}
+
+/* -----------------------------------------------------------more possts */
+
+.more-posts {
+  padding-top: 60px;
+  border: 1px dotted black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  align-content: space-around;
+  top: 0;
+  width: 80%;
+  height: auto;
+  margin: 12px;
+  overflow: hidden;
+  float: right;
+  padding-right: 38px;
 }
 
 /* -----------------------------------------------------------GRADIENT BOX  */
