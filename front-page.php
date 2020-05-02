@@ -132,7 +132,7 @@ while($query->have_posts()) : $query->the_post();
 				);
 				$query = new WP_Query($args);
 				while($query->have_posts()) : $query->the_post();
-					$lastsection = $post->ID;
+					$thirdsection = $post->ID;
 				?>
 				<div class="wrapper_textsize3">
 				<?php
@@ -159,6 +159,7 @@ while($query->have_posts()) : $query->the_post();
 </div>
 
 --------
+											<!-- More Posts-->
 <div class="more-posts">
 <ul>
    <li><button>this will be a button</button></li>
@@ -167,7 +168,7 @@ while($query->have_posts()) : $query->the_post();
 					$morePosts = new WP_Query(array(
 						'post_type' => 'post',
 						'posts_per_page' => 6,
-						'post__not_in' => array($firstsection, $secondsection, $lastsection),
+						'post__not_in' => array($firstsection, $secondsection, $thirdsection),
 						'paged' => $currentPost
 					));
 						if($morePosts->have_posts()) :
