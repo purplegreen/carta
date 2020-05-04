@@ -12,15 +12,13 @@ get_header();
     							<!-- First POST -->
 				
 		<?php
-		// $currentPost = get_query_var('paged');
-   		$args = array (
+   		$args1 = array (
    		'post_type' => 'post',
-		'posts_per_page' => 1,
-		// 'paged' => $currentPost,
+		'posts_per_page' => 1
  		);
-		$query = new WP_Query($args);
-		while($query->have_posts()) : 
-		$query->the_post();
+		$query1 = new WP_Query($args1);
+		while($query1->have_posts()) : 
+		$query1->the_post();
 		?>
 <div class="first_section">
 		 <div class="wrapper_textandiconsize1">			
@@ -50,21 +48,19 @@ get_header();
 
 
     <?php
-		// $currentPost = get_query_var('paged');
-   		$args = array (
+   		$args2 = array (
    		'post_type' => 'post',
 		'posts_per_page' => 2,
-		'offset' => 1,
-		// 'paged' => $currentPost,
+		'offset' => 1
  		);
-		$query = new WP_Query($args);
-		while($query->have_posts()) : ?>
+		$query2 = new WP_Query($args2);
+		while($query2->have_posts()) : ?>
 
 		<p class="whitespace"></p>
 		<div class="second_section">							
 				    <div class="wrapper_textandiconsize1">		
 							<div class="wrapper_textsize2">				
-		<?php	$query->the_post(); ?>	
+		<?php	$query2->the_post(); ?>	
 				<a class="undecorated" href="<?php the_permalink(); ?>">
 				   <h3><?php the_title(); ?></h3>
 				   <p class="authortime_size2 somespace">
@@ -112,18 +108,16 @@ get_header();
 			
 		<div class="third_section"> 
 						<?php
-		// $currentPost = get_query_var('paged');
-   		$args = array (
+   		$args3 = array (
    		'post_type' => 'post',
 		'posts_per_page' => 6,
-		'offset' => 3,
-		// 'paged' => $currentPost,
+		'offset' => 3
  		);
-		$query = new WP_Query($args);
-		while($query->have_posts()) : ?>
+		$query3 = new WP_Query($args3);
+		while($query3->have_posts()) : ?>
  
  		<div class="wrapper_textsize3">
- 		<?php	$query->the_post();?>	
+ 		<?php	$query3->the_post();?>	
 				<a class="undecorated" href="<?php the_permalink(); ?>">
 				   <h4><?php the_title(); ?></h4></a>
 				   <p class="authortime_size2 somespace">
@@ -140,18 +134,20 @@ get_header();
 		<div class="more-posts">
 		<ul>
 		<?php
-	                $currentPage = (get_query_var('paged')) ? get_query_var('paged') : 1;
-					$args = array('posts_per_page' => 5, 'paged' => $currentPage);
-					query_posts($args);
-					if ( have_posts());
-					while(have_posts()): the_post();
-								?>
+
+					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+					$query4 = new WP_Query( array( 
+						'post_type' => 'post', 
+						'offset' => 9,
+						'posts_per_page' => 5, 
+						'paged' => $paged 
+					));
+						while($query4->have_posts()) : ?>
+						<?php	$query4->the_post();?>	
 			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
 								<?php
 			 endwhile;
- 
-			 // next_posts_link() usage with max_num_pages.
-			 next_posts_link( __( 'Next' ), $the_query->max_num_pages );
+			 next_posts_link( __( 'Next' ), $query4->max_num_pages );
 			 previous_posts_link( __( 'Prev') ); ?>
 		  
 		  <?php 		
