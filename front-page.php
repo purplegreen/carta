@@ -133,22 +133,24 @@ get_header();
 											<!-- More Posts-->
 		<div class="more-posts">
 		<ul>
-		<?php
 
-					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+<?php
+					$paged = (get_query_var('page')) ? get_query_var('page') : 3;
 					$query4 = new WP_Query( array( 
 						'post_type' => 'post', 
-						'offset' => 9,
-						'posts_per_page' => 5, 
-						'paged' => $paged 
+						'posts_per_page' => 6, 
+						'paged' => $paged
 					));
 						while($query4->have_posts()) : ?>
 						<?php	$query4->the_post();?>	
 			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
 								<?php
 			 endwhile;
+			 previous_posts_link( __( 'Prev') );
 			 next_posts_link( __( 'Next' ), $query4->max_num_pages );
-			 previous_posts_link( __( 'Prev') ); ?>
+			 
+
+ ?>
 		  
 		  <?php 		
 				wp_reset_postdata(); ?>  
