@@ -654,8 +654,7 @@ h6 /*--- icon */ {
 /* -----------------------------------------------------------more possts */
 
 .more-posts {
-  padding-top: 60px;
-  border: 1px dotted black;
+  padding-top: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
