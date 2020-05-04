@@ -42,7 +42,7 @@ get_header();
 		    </div>
 		</div>
 		</a>
-		<?php endwhile; wp_reset_query(); ?>
+		<?php endwhile; wp_reset_postdata(); ?>
 </div>
 
 
@@ -80,7 +80,7 @@ get_header();
 				</div>
 		</a>				
 		</div>
-				<?php endwhile; wp_reset_query(); ?>
+				<?php endwhile; wp_reset_postdata(); ?>
 
 
 
@@ -134,34 +134,32 @@ get_header();
 				</a>
 				</div>
 				<?php endwhile; 		
-				wp_reset_query(); ?>                 
+				wp_reset_postdata(); ?>                 
 </div>
 											<!-- More Posts-->
 		<div class="more-posts">
 		<ul>
 		<?php
-					$currentPost = get_query_var('paged');
-					$morePosts = new WP_Query(array(
-						'posts_per_page' => 5, 
-						'paged' => $currentPost,
-					));
-						if($morePosts->have_posts()) :
-							while ($morePosts->have_posts()) :
-								$morePosts->the_post();
+	                $currentPage = (get_query_var('paged')) ? get_query_var('paged') : 1;
+					$args = array('posts_per_page' => 5, 'paged' => $currentPage);
+					query_posts($args);
+					if ( have_posts());
+					while(have_posts()): the_post();
 								?>
 			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
 								<?php
-							endwhile;
-
-			next_posts_link('Next', $morePosts->max_num_pages);
-
-						endif;	
-				//  wp_reset_query(); ?>
+			 endwhile;
+ 
+			 // next_posts_link() usage with max_num_pages.
+			 next_posts_link( __( 'Next' ), $the_query->max_num_pages );
+			 previous_posts_link( __( 'Prev') ); ?>
+		  
+		  <?php 		
+				wp_reset_postdata(); ?>  
 				</ul>
 	
 
 </div>	
-
 </div>
 </main>
 
