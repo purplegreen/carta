@@ -171,42 +171,34 @@ get_header();
 				</a>
 				</div>
 				<?php endwhile; 		
-				wp_reset_postdata(); ?>                 
+				wp_reset_postdata(); ?>     
+				<a name="blog" class="anchor"></a>            
 </div>
-											<!-- More Posts-->
-		<div class="more-posts">
-		<ul>
+							<!-- More Posts-->
 
+
+		<div class="more-posts">
+		
+		<ul>
+		<a name="blog" class="anchor"></a>
 <?php
 					$paged = (get_query_var('page')) ? get_query_var('page') : 3;
 					$query4 = new WP_Query( array( 
 						'post_type' => 'post', 
 						'posts_per_page' => 6, 
-						'paged' => $paged
+						'paged' => $paged,
 					));
 						while($query4->have_posts()) : ?>
 						<?php	$query4->the_post();?>	
-						<?php
-				$posttags = get_the_tags();
-				$count=0;
-				if ($posttags) {
-				foreach($posttags as $tag) {
-					$count++;
-					if (1 == $count) {
-						echo '<p class="homepage-tag"><a href="'.get_tag_link($tag->term_id).'"> #'.$tag->name.'</a></p>';
-					}}
-				}
-				?>
 			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
 								<?php
 			 endwhile; ?>
-			<a name="more" class="anchor"> <button class="older">
+		
+		<span class="pagenavi">
 			 <?php 
 			 next_posts_link( __( 'Ältere Artikel' ), $query4->max_num_pages ); ?>
-			 </button></a>
-
-
-		  
+			</span>
+		
 		  <?php 		
 				wp_reset_postdata(); ?>  
 				</ul>
@@ -217,12 +209,16 @@ get_header();
 </main>
 
 <?php get_footer(); ?>
-<!-- Scripts -->
+																		<!-- Scripts -->
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('html, body').scrollTop( 
-            $('[name="more"]').offset().top 
-        );
-    });
-</script>
+$(document).ready(function() {
+    $('.pagenavi a').each(function(i,a){$(a).attr('href',$(a).attr('href')+'#blog')});
+});
+</script>	
+	
