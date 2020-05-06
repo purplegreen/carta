@@ -8,10 +8,11 @@
 		<meta name="keywords" content="">
 		<meta name="author" content="dehlix" />
 		<title><?php bloginfo('name'); ?></title>
+
 		<?php wp_head(); ?>
 	</head>
 
-<body <?php body_class(); ?>
+<body <?php body_class(); ?>>
 
 
 
@@ -42,23 +43,5 @@
 <div class="mobile-nav-toggle"><span class="toggle"></span></div>
 
 
-
-																		<!-- Scripts -->
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script type="text/javascript">
-	jQuery(function(){
-	jQuery('.mobile-nav-toggle').click(function() {
-		jQuery('#mobile-nav.is-open').toggleClass('open');
-		jQuery('.toggle').toggleClass('active');
-		jQuery('.case').toggleClass('slide');
-		jQuery('.b1item').toggleClass('slide');
-});
-});
-</script>		
 </header>	
 <!-- /site-header -->

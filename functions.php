@@ -3,6 +3,8 @@
 function apparenza() {
 	wp_enqueue_style('custom-fonts' , '//fonts.googleapis.com/css?family=Work+Sans|Noto+Serif+TC');
 	wp_enqueue_style('footfootfoot' , '//use.fontawesome.com/releases/v5.3.1/css/all.css');
+	wp_enqueue_script('apriti', get_stylesheet_directory_uri() .'/js/apriti.js', array( 'jquery' ), NULL, false );
+	wp_enqueue_script('anchor', get_stylesheet_directory_uri() . '/js/anchor.js', array( 'jquery' ), NULL, false );
 	wp_enqueue_style('style' , get_stylesheet_uri());
 }
 add_action('wp_enqueue_scripts' , 'apparenza');

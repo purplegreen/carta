@@ -209,16 +209,5 @@ get_header();
 </main>
 
 <?php get_footer(); ?>
-																		<!-- Scripts -->
 
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('.pagenavi a').each(function(i,a){$(a).attr('href',$(a).attr('href')+'#blog')});
-});
-</script>	
 	
