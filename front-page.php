@@ -51,8 +51,7 @@ get_header();
 					</div>
 					<a class="undecorated" href="<?php the_permalink(); ?>">
 					<div class="wrapper_iconsize1">
-					
-					<?php the_post_thumbnail() ?>
+					<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'fittin' ) ); ?>
 					</div>
 				</a>
 		    </div>
@@ -103,7 +102,7 @@ get_header();
 				</div>
 				<a class="undecorated" href="<?php the_permalink(); ?>">
 				<div class="wrapper_iconsize2">
-				<?php the_post_thumbnail() ?>
+				<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'fittin' ) ); ?>
 				</div></a>
 				</div>
 		</a>				
@@ -179,8 +178,8 @@ get_header();
 
 		<div class="more-posts">
 		
-		<ul>
-		<a name="blog" class="anchor"></a>
+		<ul class="more-posts-list">
+		
 <?php
 					$paged = (get_query_var('page')) ? get_query_var('page') : 3;
 					$query4 = new WP_Query( array( 
@@ -190,15 +189,15 @@ get_header();
 					));
 						while($query4->have_posts()) : ?>
 						<?php	$query4->the_post();?>	
-			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li> 
+						<h4><li class="more-posts-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li></h4>
 								<?php
 			 endwhile; ?>
-		
+		<div class="next">
 		<span class="pagenavi">
 			 <?php 
 			 next_posts_link( __( 'Ältere Artikel' ), $query4->max_num_pages ); ?>
 			</span>
-		
+			</div>
 		  <?php 		
 				wp_reset_postdata(); ?>  
 				</ul>
