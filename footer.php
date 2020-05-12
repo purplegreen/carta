@@ -37,7 +37,7 @@
 
 		<!--4-->
 				<div class="item-d-footer">
-									<ul  class="">
+									<ul class="footer-felx-list">
 										<?php 
 									wp_nav_menu( array(
 									'theme_location' => 'footer' 

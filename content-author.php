@@ -14,7 +14,7 @@
 
 	<div class="autorsarticles">
 					
-					<h4><a class="undecorated" href="<?php the_permalink() ?>"  rel="bookmark" title="Permalink"><?php the_title(); ?></a></h4>
+					<h4><a class="undecorated" href="<?php the_permalink() ?>" rel="bookmark" title="Permalink"><?php the_title(); ?></a></h4>
 
 					<div class="info-article">
 						<p class="authortime_size2"><?php /*coauthors_posts_links();*/ ?><span title="<?php the_time('H:i') ?> Uhr"><?php the_time('d.m.Y') ?></p>

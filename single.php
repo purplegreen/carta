@@ -47,7 +47,11 @@ get_header(); ?>
 			<div class="the-content"><?php the_content(); ?></div>
 			<div class="article-sub-wrapper the-content"><?php the_field('article_sub_text', 'options'); ?></div>
 
-</div>	    	
+</div>	    
+	<div class="wrap-tags">	
+	<?php the_tags( 'Topics:  ', ' |  ', '  ' ); ?>
+	</div>
+
 </div>			
 </main>
 
