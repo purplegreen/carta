@@ -38,6 +38,16 @@ register_nav_menus(array(
 add_action('after_setup_theme','myWordPress_setup');
 
 
+function exclude_category_home( $query ) {
+	if ( $query->is_home ) {
+	$query->set( 'cat', '-13094' );
+	}
+	return $query;
+	}
+	 
+	add_filter( 'pre_get_posts', 'exclude_category_home' );
+
+
 // Add a New Menu Location
 
 function extra_setup() {
