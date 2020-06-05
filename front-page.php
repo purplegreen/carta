@@ -181,7 +181,7 @@ get_header();
 							<!-- More Posts-->
 
 
-		<div class="more-posts">
+							<div class="more-posts">
 		
 		<ul class="more-posts-list">
 		
@@ -189,7 +189,7 @@ get_header();
 					$paged = (get_query_var('page')) ? get_query_var('page') : 3;
 					$query4 = new WP_Query( array( 
 						'post_type' => 'post', 
-						'posts_per_page' => 6, 
+						'posts_per_page' => 10, 
 						'paged' => $paged,
 					));
 						while($query4->have_posts()) : ?>
@@ -206,7 +206,7 @@ get_header();
 					}}
 				}
 				?>
- 		<?php	$query3->the_post();?>	
+ 		
 				<a class="undecorated" href="<?php the_permalink(); ?>">
 				   <h4><?php the_title(); ?></h4></a>
 				   <p class="authortime_size2 somespace">
@@ -229,6 +229,7 @@ get_header();
 </div>	
 </div>
 </main>
+
 
 <?php get_footer(); ?>
 

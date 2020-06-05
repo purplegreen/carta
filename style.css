@@ -600,7 +600,8 @@ h1 img {
 
 /* -----------------------------------------------------------third_section */
 
-.third_section {
+.third_section,
+.more-posts {
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -614,7 +615,8 @@ h1 img {
 }
 
 .wrapper_textsize3,
-.wrapper_textsize3_left {
+.wrapper_textsize3_left,
+.more-posts-item {
   display: inline-block;
   width: 47%;
   padding: 6px 6px 15px 6px;
@@ -636,23 +638,12 @@ h1 img {
 
 .more-posts {
   padding-top: 30px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
-  align-content: space-around;
-  top: 0;
-  width: 80%;
-  height: auto;
-  margin: 12px;
-  overflow: hidden;
-  float: right;
-  padding-right: 38px;
 }
 
 .more-posts-item {
-  padding-bottom: 5px;
-  width: 70%;
+  display: inline-block;
+  width: 47%;
+  padding: 3px 6px 9px 6px;
 }
 
 .next {
