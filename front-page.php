@@ -9,10 +9,12 @@ get_header();
 <p><?php the_field('banner_anim', 'options'); ?></p>
 </div>
 <svg class="svg-claim" 
-  width="388px" height="255px" viewBox="0 0 388 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ width="259px" height="231px" viewBox="0 0 259 231" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="anim">
-            <polygon id="RectangOLO" fill="#64FFE5" transform="translate(179.500000, 123.000000) rotate(24.000000) translate(-179.500000, -123.000000) " points="24 75 335 75 335 171 24 171"></polygon>
+            <rect id="RectangOLA" fill="#F85621" transform="translate(114.500000, 124.500000) rotate(-7.000000) translate(-114.500000, -124.500000) " x="28" y="38" width="173" height="173"></rect>
+            <rect id="RectangOLO" fill="#64FFE5" transform="translate(129.500000, 117.500000) rotate(11.000000) translate(-129.500000, -117.500000) " x="43" y="31" width="173" height="173"></rect>
+            <polygon id="RectangOLE" fill="#F7E9DE" transform="translate(143.558659, 107.609196) rotate(4.000000) translate(-143.558659, -107.609196) " points="55 21 232.117318 21.2183912 232.117318 194.218391 59.1173177 194.218391"></polygon>
         </g>
     </g>
 </svg>
@@ -183,7 +185,7 @@ get_header();
 
 							<div class="more-posts">
 		
-		<ul class="more-posts-list">
+	
 		
 <?php
 					$paged = (get_query_var('page')) ? get_query_var('page') : 3;
@@ -194,7 +196,7 @@ get_header();
 					));
 						while($query4->have_posts()) : ?>
 						<?php	$query4->the_post();?>
-						<li class="more-posts-item">				
+						<div class="more-posts-item">				
 						<?php
 				$posttags = get_the_tags();
 				$count=0;
@@ -212,7 +214,7 @@ get_header();
 				   <p class="authortime_size2 somespace">
 				   von <?php coauthors_posts_links(); ?>, <?php echo get_the_date('d.n.'); ?>
 				</p> 	
-						</li>
+			</div>
 								<?php
 			 endwhile; ?>
 		<div class="next">
@@ -223,7 +225,7 @@ get_header();
 			</div>
 		  <?php 		
 				wp_reset_postdata(); ?>  
-				</ul>
+				
 	
 
 </div>	

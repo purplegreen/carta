@@ -466,8 +466,8 @@ h1 img {
   width: 200px;
   height: 210px;
   position: absolute;
-  top: 30px;
-  left: 37vw;
+  top: 10px;
+  left: 28vw;
   z-index: 3;
 }
 
@@ -475,8 +475,8 @@ h1 img {
   font-family: "Work Sans", sans-serif;
   font-weight: bold;
   color: white;
-  font-size: 2.9rem;
-  line-height: 2.5rem;
+  font-size: 3.7rem;
+  line-height: 3.7rem;
 }
 
 .svg-claim {
@@ -486,8 +486,8 @@ h1 img {
 }
 
 #RectangOLO {
-  -webkit-animation: dance 3s infinite alternate;
-  animation: dance 3s infinite alternate;
+  -webkit-animation: dance 5s infinite alternate;
+  animation: dance 5s infinite alternate;
 }
 
 @-webkit-keyframes dance {
@@ -499,6 +499,33 @@ h1 img {
   }
 }
 
+#RectangOLA {
+  -webkit-animation: dance 8s infinite alternate;
+  animation: dance 8s infinite alternate;
+}
+
+@-webkit-keyframes dance {
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(7deg);
+  }
+}
+
+#RectangOLE {
+  -webkit-animation: dance 7s infinite alternate;
+  animation: dance 7s infinite alternate;
+}
+
+@-webkit-keyframes dance {
+  50% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(9deg);
+  }
+}
 /* ---------------------------------------------home content */
 
 #homemain {
@@ -605,13 +632,14 @@ h1 img {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  align-items: flex-start;
   top: 0;
   width: 80%;
   height: auto;
   margin: 12px;
   overflow: hidden;
   float: right;
-  padding-right: 38px;
+  margin-right: 38px;
 }
 
 .wrapper_textsize3,
@@ -619,15 +647,19 @@ h1 img {
 .more-posts-item {
   display: inline-block;
   width: 47%;
-  padding: 6px 6px 15px 6px;
+  padding: 6px 12px 12px 6px;
 }
 
-.wrapper_textsize3_left {
-  float: left;
+.more-posts {
+  background-color: #f5f5f5;
+  padding: 14px;
+  box-sizing: border-box;
 }
 
-.wrapper_textsize3 {
-  float: right;
+.anchor {
+  position: relative;
+  display: block;
+  width: 100%;
 }
 
 .box:hover {
@@ -635,16 +667,6 @@ h1 img {
 }
 
 /* -----------------------------------------------------------more possts */
-
-.more-posts {
-  padding-top: 30px;
-}
-
-.more-posts-item {
-  display: inline-block;
-  width: 47%;
-  padding: 3px 6px 9px 6px;
-}
 
 .next {
   color: black;
@@ -682,7 +704,6 @@ h1 img {
   text-align: center;
   margin-top: 35px;
   margin-bottom: 35px;
-  padding-bottom: 35px;
 }
 
 /* --------------------gradient_box--first session  */
@@ -1098,7 +1119,7 @@ footer {
 }
 
 .footer-wrap {
-  margin-top: 17vh;
+  margin-top: 35px;
   display: grid;
   /*grid-template-columns: 15vw 37% auto 42% 5vw;*/
   grid-template-columns: 110px 44% 57px auto 5vw;
@@ -1248,7 +1269,7 @@ ul#menu-footer_menu li a:hover {
   }
 
   .second_section {
-    width: 65%;
+    width: 75%;
     padding-right: 7%;
   }
 
@@ -1257,7 +1278,7 @@ ul#menu-footer_menu li a:hover {
   }
 
   .wrapper_textsize2 {
-    width: 45vw;
+    width: 55vw;
     margin-right: 6px;
   }
 
@@ -1265,6 +1286,12 @@ ul#menu-footer_menu li a:hover {
   .third_section_bottom {
     width: 65%;
     padding-right: 7%;
+  }
+
+  .wrapper_textsize3,
+  .wrapper_textsize3_left,
+  .more-posts-item {
+    padding: 6px 24px 12px 6px;
   }
 
   /*--- inside page */
