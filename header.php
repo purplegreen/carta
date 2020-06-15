@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="CARTA online">
 		<meta name="keywords" content="">
-		<meta name="author" content="dehlix" />
-		<title><?php bloginfo('name'); ?></title>
+		<meta name="author" content=CARTA online />
+		<title><?php wp_title(''); ?></title>
 
 		<?php wp_head(); ?>
 	</head>

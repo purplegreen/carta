@@ -11,11 +11,13 @@ add_action('wp_enqueue_scripts' , 'apparenza');
 
 
 // Theme Logo
-	
 	add_theme_support( 'custom-logo' );
 
+// Let WordPress manage the document title
+	add_theme_support( 'title-tag' );
+
 // Post-thumbnails
-add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 // Theme setup
 

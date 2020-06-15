@@ -9,15 +9,16 @@ get_header();
 <p><?php the_field('banner_anim', 'options'); ?></p>
 </div>
 <svg class="svg-claim" 
- width="259px" height="231px" viewBox="0 0 259 231" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+width="314px" height="260px" viewBox="0 0 314 260"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="anim">
-            <rect id="RectangOLA" fill="#F85621" transform="translate(114.500000, 124.500000) rotate(-7.000000) translate(-114.500000, -124.500000) " x="28" y="38" width="173" height="173"></rect>
-            <rect id="RectangOLO" fill="#64FFE5" transform="translate(129.500000, 117.500000) rotate(11.000000) translate(-129.500000, -117.500000) " x="43" y="31" width="173" height="173"></rect>
-            <polygon id="RectangOLE" fill="#F7E9DE" transform="translate(143.558659, 107.609196) rotate(4.000000) translate(-143.558659, -107.609196) " points="55 21 232.117318 21.2183912 232.117318 194.218391 59.1173177 194.218391"></polygon>
+            <rect id="RectangOLA" fill="#F85621" transform="translate(150.500000, 136.500000) rotate(-7.000000) translate(-150.500000, -136.500000) " x="64" y="50" width="173" height="173"></rect>
+            <rect id="RectangOLO" fill="#64FFE5" transform="translate(165.500000, 129.500000) rotate(11.000000) translate(-165.500000, -129.500000) " x="79" y="43" width="173" height="173"></rect>
+            <polygon id="RectangOLE" fill="#F7E9DE" fill="#F7E9DE" transform="translate(179.558659, 119.609196) rotate(4.000000) translate(-179.558659, -119.609196) " points="91 33 268.117318 33.2183912 268.117318 206.218391 95.1173177 206.218391"></polygon>
         </g>
     </g>
 </svg>
+
 
 <div class="home-content">
 
