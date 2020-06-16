@@ -5,8 +5,8 @@
 		<meta charset="<?php bloginfo('charset'); ?>" >
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="CARTA online">
-		<meta name="keywords" content="">
-		<meta name="author" content=CARTA online />
+		<meta name="keywords" content="Politik, Kultur, Ereignis, Ökonomie, Digitale Gesellschaft, Digitalisierung, künstliche Intelligenz, ">
+		<meta name="author" content="CARTA online" />
 		<title><?php wp_title(''); ?></title>
 
 		<?php wp_head(); ?>

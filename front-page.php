@@ -218,7 +218,7 @@ width="314px" height="260px" viewBox="0 0 314 260"  version="1.1" xmlns="http://
 			</div>
 								<?php
 			 endwhile; ?>
-		<div class="next">
+		<div class="next-ones">
 		<span class="pagenavi">
 			 <?php 
 			 next_posts_link( __( 'Ältere Artikel' ), $query4->max_num_pages ); ?>

@@ -34,15 +34,14 @@ register_nav_menus(array(
 
 // Add excerp
 	add_post_type_support( 'page', 'excerpt' );
-
 }
-
 add_action('after_setup_theme','myWordPress_setup');
 
 
+// Exlude Category from Homepage
 function exclude_category_home( $query ) {
 	if ( $query->is_home ) {
-	$query->set( 'cat', '-13094' );
+	$query->set( 'cat', '-13141' );
 	}
 	return $query;
 	}
